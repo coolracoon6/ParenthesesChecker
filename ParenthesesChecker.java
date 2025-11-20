@@ -9,9 +9,11 @@ public class ParenthesesChecker {
         System.out.println(parenthesesChecker("(]"));
 
     }
+    // This method checks if the parentheses in your input is closed correctly, you must input a string of parentheses
+    // will return true if the parentheses is closed correctly and false otherwise
     public static boolean parenthesesChecker(String s){
         String end = ")}]";
-        for (int i = 0; i<s.length(); i++){
+        for (int i = 0; i< s.length(); i++){
             String character = s.substring(i,i+1);
             if(end.contains(character)){
                 if (s.substring(i-1,i).equals("(") || character.equals(")") && (s.substring(i-1,i).equals("[") && character.equals("]")) ||
